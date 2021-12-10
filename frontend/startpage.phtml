@@ -1,0 +1,76 @@
+
+<?php
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+?>
+
+<!DOCTYPE html>
+<html lang="<?php
+if (isset($_GET["language"])) {
+    echo $_GET["language"];
+}
+else {
+    echo "de";
+}
+?>">
+<head>
+    <link href="frontend/style/startpage.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <script  src="/controller/Controllerstartpage.js"></script>
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li><a href="?language=de" class="language" name="deutsch" id="deutsch" disabled="false">deutsch</a></li>
+        <li><a href="?language=fr" class="language" name="français" id="français" disabled="false">français</a></li>
+        <li><a href="?language=en" class="language" name="english" id="english" disabled="false">english</a></li>
+    </ul>
+
+
+
+    <div id="over">
+        <p><?php _e("Departure");?></p>
+        <p><?php _e("Arrival");?></p>
+    </div>
+
+<div id="wählen">
+    <div id="left">
+        <div class="view"><p aria-placeholder="von">hello</p></div>
+
+        <div class="list" id="Schwarzenburg"><button lang="de">Schwarzenburg<i class=""></i></button></div>
+        <div class="list" id="Riedstätt-Kalchstätten"><button lang="de">Riedstätt-Kalchstätten</button></div>
+        <div class="list" id="Plaffeien"><button land="de">Plaffeien</button></div>
+        <div class="list" id="Passelb"><button lang="de">Passelb</button></div>
+        <div class="list" id="Chrachen"><button lang="de">Chrachen</button></div>
+        <div class="list" id="Parmathaux / Le Mouret"><button lang="fr">Parmathaux / Le Mouret</button></div>
+        <div class="list" id="La Roche"><button lang="fr">La Roche</button></div>
+        <div class="list" id="Hauteville"><button lang="fr">Hauteville</button></div>
+        <div class="list" id="Corbières"><button lang="fr">Corbières</button></div>
+        <div class="list" id="Villarvolard"><button lang="fr">Villarvolard</button></div>
+        <div class="list" id="Botterens"><button lang="fr">Botterens</button></div>
+        <div class="list" id="Broc-Fabrique"><button lang="fr">Broc-Fabrique</button></div>
+        <div class="list" id="Broc-Village"><button lang="fr">Broc-Village</button></div>
+    </div>
+    <div id="right">
+        <div class="view"><p aria-placeholder="nach">hello</p></div>
+
+        <div class="list"><button lang="de">Schwarzenburg<i class=""></i></button></div>
+        <div class="list"><button lang="de">Riedstätt-Kalchstätten</button></div>
+        <div class="list"><button land="de">Plaffeien</button></div>
+        <div class="list"><button lang="de">Passelb</button></div>
+        <div class="list"><button lang="de">Chrachen</button></div>
+        <div class="list"><button lang="fr">Parmathaux / Le Mouret</button></div>
+        <div class="list"><button lang="fr">La Roche</button></div>
+        <div class="list"><button lang="fr">Hauteville</button></div>
+        <div class="list"><button lang="fr">Corbières</button></div>
+        <div class="list"><button lang="fr">Villarvolard</button></div>
+        <div class="list"><button lang="fr">Botterens</button></div>
+        <div class="list"><button lang="fr">Broc-Fabrique</button></div>
+        <div class="list"><button lang="fr">Broc-Village</button></div>
+    </div>
+</div>
+
+
+</body>
+</html>
